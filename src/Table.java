@@ -49,7 +49,7 @@ public class Table
     {
         while (numberOfPeople > MaxPeople||numberOfPeople < 1)
         {
-            System.out.println("People can't be more than MaxPeople or less than 1,please try again");
+            System.out.println(ColourUtil.error("People can't be more than MaxPeople or less than 1,please try again"));
             numberOfPeople=input.nextInt();
             input.nextLine();
         }
@@ -94,11 +94,11 @@ public class Table
     }
     public void getBillDetails()
     {
-        System.out.println("Beef cheese hamburger number:"+beefCheeseHamburger.getNumber()+" * price:"+ beefCheeseHamburger.getPrice());
-        System.out.println("Chicken cheese hamburger:"+chickenCheeseHamburger.getNumber()+" * price:"+ chickenCheeseHamburger.getPrice());
-        System.out.println("Beef hamburger number:"+beefHamburger.getNumber() +" * price:"+ beefHamburger.getPrice());
-        System.out.println("Chicken hamburger:"+chickenHamburger.getNumber() +" * price:"+ chickenHamburger.getPrice());
-        System.out.println("total:"+getBill());
+        System.out.println(ColourUtil.info("Beef cheese hamburger number:")+beefCheeseHamburger.getNumber()+ColourUtil.info(" * price:")+ beefCheeseHamburger.getPrice());
+        System.out.println(ColourUtil.info("Chicken cheese hamburger:")+chickenCheeseHamburger.getNumber()+ColourUtil.info(" * price:")+ chickenCheeseHamburger.getPrice());
+        System.out.println(ColourUtil.info("Beef hamburger number:")+beefHamburger.getNumber() +ColourUtil.info(" * price:")+ beefHamburger.getPrice());
+        System.out.println(ColourUtil.info("Chicken hamburger:")+chickenHamburger.getNumber() +ColourUtil.info(" * price:")+ chickenHamburger.getPrice());
+        System.out.println(ColourUtil.BOLD+"total:"+getBill()+ColourUtil.RESET);
     }
 
     @Override
